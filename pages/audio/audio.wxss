@@ -1,0 +1,9 @@
+/* pages/audio/audio.wxss */
+.container {
+  padding: 100rpx 0 20rpx 0;
+}
+.audioControl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

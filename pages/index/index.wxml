@@ -5,6 +5,8 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto" bindtap="toAudio">{{motto}}audio</text>
+    <text class="user-motto" bindtap="toVidio">{{motto}}video</text>
+    <text class="user-motto" bindtap="toTest">{{motto}}test</text>
   </view>
 </view>

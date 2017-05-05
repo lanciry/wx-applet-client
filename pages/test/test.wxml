@@ -1,0 +1,47 @@
+<text>-----------------view wx:for</text>
+<view wx:for="{{array}}">
+  {{index}}: {{item.message}}
+</view>
+
+<text>-----------------block wx:for</text>
+<block wx:for="{{[1, 2, 3]}}">
+  <view> {{index}}: </view>
+  <view> {{item}} </view>
+</block>
+
+<text>-----------------switch wx:key</text>
+<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+
+<switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button>
+
+<text>-----------------wx:if elif else</text>
+<view wx:if="{{3 > 5}}"> 1 </view>
+<view wx:elif="{{3 > 2}}"> 2 </view>
+<view wx:else> 3 </view>
+
+<text>-----------------template</text>
+<template name="msgItem">
+  <view>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+<template is="msgItem" data="{{...item}}"/>
+
+<text>-----------------template is 动态</text>
+<template name="odd">
+  <view> odd </view>
+</template>
+<template name="even">
+  <view> even </view>
+</template>
+<block wx:for="{{[1, 2, 3, 4, 5]}}">
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+</block>
+
+<text>-----------------canIUse</text>
+<button wx:if="{{canIUse}}" open-type="contact"> 客服消息 </button>
+<contact-button wx:else></contact-button>

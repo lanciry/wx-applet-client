@@ -1,0 +1,12 @@
+/* pages/video/video.wxss */
+.container {
+  padding: 100rpx 0 20rpx 0;
+}
+.danmu {
+  border: solid 1px blue;
+  margin: 10rpx 0;
+  border-radius: 5px;
+}
+.btn-area {
+  margin-top: 10rpx;
+}
